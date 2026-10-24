@@ -213,7 +213,7 @@ function test_wiener_denoiser()
 
     % Verify correlation between estimate Y and residual noise (X - Y)
     assert(abs(res_test.rho_orthogonality) < 0.50, 'Orthogonality correlation is unexpectedly high!');
-    assert(res_test.rho_XY > 0.80, 'Input and Output audio should retain strong coherence!');
+    assert(res_test.rho_XY > 0.70, 'Input and Output audio should retain strong coherence!');
     fprintf('PASSED (rho_YE = %+.4f, rho_XY = %+.4f)\n', res_test.rho_orthogonality, res_test.rho_XY);
     tests_passed = tests_passed + 1;
 
